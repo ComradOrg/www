@@ -30,11 +30,10 @@
 <h4 id="posting">Posting</h4>
 <ul>
 <li>Post up to 1 image and/or 1000 characters</li>
-<li>Post to the entire world (e.g. Twitter)</li>
+<li>Post to the entire world (e.g. Twitter) ✔</li>
 <li>Post to those you trust (e.g. Facebook)</li>
 <li>Post to your surrounding area by a distance radius (e.g. Nextdoor)</li>
 <li>Anonymously up-vote or down-vote posts (e.g. Reddit)</li>
-<li>Post anonymously or from your account</li>
 </ul>
 <h4 id="organizing">Organizing</h4>
 <ul>
@@ -44,9 +43,11 @@
 </ul>
 <h4 id="messaging">Messaging</h4>
 <ul>
-<li>Message securely with encrypted contents (e.g. Signal)</li>
-<li>Message securely with untraceable metadata (new)</li>
+<li>Message securely with encrypted contents (e.g. Signal) ✔</li>
+<li>Message with untraceable metadata via Tor (new) ✔</li>
 </ul>
+<h3 id="how-is-this-different-from-...">How is this different from? ...</h3>
+<p>See <a href="https://github.com/Komrade/Komrade/wiki/Comparison-of-alternative-social-networks">&quot;Comparison of alternative social networks&quot; on the wiki</a>. And please help edit, if you can! The data there is a little incomplete and probably a little inaccurate.</p>
 <h2 id="progress">Progress</h2>
 <h3 id="animations-from-mobiledesktop-app">Animations from mobile/desktop app</h3>
 <p>As of the 23rd of August.</p>
@@ -62,6 +63,8 @@
 <p><img src="komrade/app/assets/komrade-terminal-preview--2020-09-16--msg.gif" alt="GIF animation of messaging" /></p>
 <h3 id="posting-1">Posting</h3>
 <p><img src="komrade/app/assets/komrade-terminal-preview--2020-09-19--posting.gif" alt="GIF animation of posting" /></p>
+<h3 id="installing">Installing</h3>
+<p><img src="komrade/app/assets/komrade-terminal-preview--2020-09-20--install1.gif" alt="GIF animation of installing" /></p>
 <h2 id="usage">Usage</h2>
 <h3 id="install">Install</h3>
 <p>In one line:</p>
@@ -87,4 +90,9 @@
 <p>Plain old object-oriented code in Python. The root entity is a &quot;Keymaker&quot;: anyone from <span class="citation">@Telephone</span>, to <span class="citation">@Operator</span>, to users, to groups, who has a public/private key pair. The database uses a simple file-based key-value store, written in Python (<a href="https://github.com/mbr/simplekv">simplekv</a>). Code is in <a href="komrade/backend" class="uri">komrade/backend</a>.</p>
 <h4 id="cryptography">Cryptography</h4>
 <p>We are using <a href="https://github.com/cossacklabs/themis">Themis</a>, a high-level cross-platform cryptography library, for all cryptographic functions, rather than handling any primitives ourselves.</p>
-<p>Code is primarily in: * <a href="komrade/backend/keymaker.py" class="uri">komrade/backend/keymaker.py</a> * <a href="komrade/backend/komrades.py" class="uri">komrade/backend/komrades.py</a> * <a href="komrade/backend/phonelines.py" class="uri">komrade/backend/phonelines.py</a></p>
+<p>Code is primarily in:</p>
+<ul>
+<li><p><a href="komrade/backend/keymaker.py" class="uri">komrade/backend/keymaker.py</a></p></li>
+<li><p><a href="komrade/backend/komrades.py" class="uri">komrade/backend/komrades.py</a></p></li>
+<li><p><a href="komrade/backend/phonelines.py" class="uri">komrade/backend/phonelines.py</a></p></li>
+</ul>

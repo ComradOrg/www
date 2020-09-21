@@ -50,11 +50,10 @@ We present a simplified set of social media features drawn from everything that'
 
 #### Posting
   * Post up to 1 image and/or 1000 characters
-  * Post to the entire world (e.g. Twitter)
+  * Post to the entire world (e.g. Twitter) ✔
   * Post to those you trust (e.g. Facebook)
   * Post to your surrounding area by a distance radius (e.g. Nextdoor)
   * Anonymously up-vote or down-vote posts (e.g. Reddit)
-  * Post anonymously or from your account
 
 #### Organizing
   * Host events and invite others (e.g. Facebook)
@@ -62,9 +61,12 @@ We present a simplified set of social media features drawn from everything that'
   * Anonymously pin on a map sites of danger, like police (e.g. Waze)
 
 #### Messaging
-  * Message securely with encrypted contents (e.g. Signal)
-  * Message securely with untraceable metadata (new)
+  * Message securely with encrypted contents (e.g. Signal) ✔
+  * Message with untraceable metadata via Tor (new) ✔
 
+### How is this different from? ...
+
+See ["Comparison of alternative social networks" on the wiki](https://github.com/Komrade/Komrade/wiki/Comparison-of-alternative-social-networks). And please help edit, if you can! The data there is a little incomplete and probably a little inaccurate.
 
 ## Progress
 
@@ -95,6 +97,10 @@ As of the 23rd of August.
 ### Posting
 
 <img src="komrade/app/assets/komrade-terminal-preview--2020-09-19--posting.gif" alt="GIF animation of posting" />
+
+### Installing
+
+<img src="komrade/app/assets/komrade-terminal-preview--2020-09-20--install1.gif" alt="GIF animation of installing" />
 
 
 ## Usage
@@ -157,7 +163,10 @@ Plain old object-oriented code in Python. The root entity is a "Keymaker": anyon
 We are using [Themis](https://github.com/cossacklabs/themis), a high-level cross-platform cryptography library, for all cryptographic functions, rather than handling any primitives ourselves.
 
 Code is primarily in:
-* [komrade/backend/keymaker.py](komrade/backend/keymaker.py)
-* [komrade/backend/komrades.py](komrade/backend/komrades.py)
-* [komrade/backend/phonelines.py](komrade/backend/phonelines.py)
+
+  * [komrade/backend/keymaker.py](komrade/backend/keymaker.py)
+
+  * [komrade/backend/komrades.py](komrade/backend/komrades.py)
+
+  * [komrade/backend/phonelines.py](komrade/backend/phonelines.py)
 
