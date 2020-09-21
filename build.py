@@ -4,7 +4,7 @@ ROOT = os.path.dirname(__file__)
 os.chdir(ROOT)
 theme_fn=os.path.join(ROOT,'theme.html')
 with open(theme_fn) as theme_f: theme=theme_f.read()
-r = requests.get('https://raw.githubusercontent.com/Komrade/Komrade/master/README.md')
+r = requests.get('https://raw.githubusercontent.com/Komrade/Komrade/back-to-app/README.md')
 with open('README.md','w') as of:
     of.write(r.text)
 

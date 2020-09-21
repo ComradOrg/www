@@ -30,11 +30,10 @@
 <h4 id="posting">Posting</h4>
 <ul>
 <li>Post up to 1 image and/or 1000 characters</li>
-<li>Post to the entire world (e.g. Twitter)</li>
+<li>Post to the entire world (e.g. Twitter) ✔</li>
 <li>Post to those you trust (e.g. Facebook)</li>
 <li>Post to your surrounding area by a distance radius (e.g. Nextdoor)</li>
 <li>Anonymously up-vote or down-vote posts (e.g. Reddit)</li>
-<li>Post anonymously or from your account</li>
 </ul>
 <h4 id="organizing">Organizing</h4>
 <ul>
@@ -44,9 +43,131 @@
 </ul>
 <h4 id="messaging">Messaging</h4>
 <ul>
-<li>Message securely with encrypted contents (e.g. Signal)</li>
-<li>Message securely with untraceable metadata (new)</li>
+<li>Message securely with encrypted contents (e.g. Signal) ✔</li>
+<li>Message with untraceable metadata via Tor (new) ✔</li>
 </ul>
+<h2 id="how-is-this-different-from...">How is this different from...</h2>
+<h3 id="comparison-table">Comparison table</h3>
+<table>
+<colgroup>
+<col width="13%" />
+<col width="4%" />
+<col width="4%" />
+<col width="8%" />
+<col width="12%" />
+<col width="12%" />
+<col width="10%" />
+<col width="11%" />
+<col width="9%" />
+<col width="12%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Other cool thing</th>
+<th>What is it?</th>
+<th>Kind of like...</th>
+<th>Decentralized?</th>
+<th>Anonymous?</th>
+<th>Confidential?</th>
+<th>Data persistence?</th>
+<th>Identity verification?</th>
+<th>Need invitation/server?</th>
+<th>What data can user find?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><em>Komrade</em></td>
+<td><em>Social network</em></td>
+<td><em>Twitter</em></td>
+<td><em>No (central server on Tor)</em></td>
+<td><strong><em>Yes (everything routed via Tor)</em></strong></td>
+<td><strong><em>Yes (100% E2EE)</em></strong></td>
+<td><em>Minimal server (deleted ASAP)</em></td>
+<td><em>Yes (central public key repository)</em></td>
+<td><strong><em>No (works like twitter)</em></strong></td>
+<td>Mixed (global feed; hashtag search only)</td>
+</tr>
+<tr class="even">
+<td><a href="https://scuttlebutt.nz/">Secure Scuttlebutt</a></td>
+<td>Social network</td>
+<td>Twitter/Facebook</td>
+<td><strong>Fully (P2P)</strong></td>
+<td>No (P2P reveals IP; friend networks public)</td>
+<td>Partly (private E2EE, public unencrypted)</td>
+<td>Distributed across friend networks?</td>
+<td>Yes? (federated key exchange?)</td>
+<td>Yes (need initial pub)</td>
+<td>Limited (search friends-of-friends' data)</td>
+</tr>
+<tr class="odd">
+<td><a href="https://diasporafoundation.org/">Diaspora</a></td>
+<td>Social network</td>
+<td>Twitter</td>
+<td>Partly (federated)</td>
+<td>No (unless via Tor Browser)</td>
+<td>No (unencrypted?)</td>
+<td>?</td>
+<td>?</td>
+<td>Yes (need 'pod' server)</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><a href="https://joinmastodon.org/">Mastodon</a></td>
+<td>Social network</td>
+<td>Twitter</td>
+<td>Partly (federated)</td>
+<td>No (unless via Tor Browser)</td>
+<td>No (unencrypted?)</td>
+<td>?</td>
+<td>?</td>
+<td>Yes (need 'instance' server)</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><a href="https://matrix.org/">Matrix</a></td>
+<td>Group chat</td>
+<td>Slack</td>
+<td>Partly (federated)</td>
+<td>No?</td>
+<td><strong>Yes? (100% E2EE)</strong></td>
+<td>?</td>
+<td>Yes (?)</td>
+<td>Yes (invited channels only?)</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><a href="https://briarproject.org/">Briar Messenger</a></td>
+<td>Messenger</td>
+<td>WhatsApp</td>
+<td><strong>Fully (P2P)</strong></td>
+<td><strong>Yes? (Tor)</strong></td>
+<td><strong>Yes (100% E2EE)</strong></td>
+<td>None (needs 24/7 listener)</td>
+<td>Partly (public keys traded IRL)</td>
+<td>Yes (need initial contact?)</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><a href="https://cabal.chat/">Cabal Chat</a></td>
+<td>Chatrooms</td>
+<td>IRC</td>
+<td><strong>Fully (P2P)</strong></td>
+<td>No (P2P reveals IP) <sup>1</sup></td>
+<td>Mostly (shared key, not E2EE)</td>
+<td>Distributed Hash Table</td>
+<td>No (?)</td>
+<td>Not really (public chat is open)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Sources:</p>
+<p><sup>1.</sup> <a href="https://cabal.chat/faq.html#:~:text=What%20kind%20of%20security%20does,is%20involved%20in%20a%20cabal">Cabal FAQ: What kind of security is involved with Cabal?</a></p>
+<h3 id="in-words">In words</h3>
+<ol style="list-style-type: decimal">
+<li>Secure Scuttlebutt? SSB is probably the most impressive alternative social network out there. It's truly P2P, not just federated like Diaspora or Mastodon, so the content you see is coming to you via your friends and their friends: you download it directly from them. It has a great user base...</li>
+</ol>
 <h2 id="progress">Progress</h2>
 <h3 id="animations-from-mobiledesktop-app">Animations from mobile/desktop app</h3>
 <p>As of the 23rd of August.</p>
@@ -87,4 +208,9 @@
 <p>Plain old object-oriented code in Python. The root entity is a &quot;Keymaker&quot;: anyone from <span class="citation">@Telephone</span>, to <span class="citation">@Operator</span>, to users, to groups, who has a public/private key pair. The database uses a simple file-based key-value store, written in Python (<a href="https://github.com/mbr/simplekv">simplekv</a>). Code is in <a href="komrade/backend" class="uri">komrade/backend</a>.</p>
 <h4 id="cryptography">Cryptography</h4>
 <p>We are using <a href="https://github.com/cossacklabs/themis">Themis</a>, a high-level cross-platform cryptography library, for all cryptographic functions, rather than handling any primitives ourselves.</p>
-<p>Code is primarily in: * <a href="komrade/backend/keymaker.py" class="uri">komrade/backend/keymaker.py</a> * <a href="komrade/backend/komrades.py" class="uri">komrade/backend/komrades.py</a> * <a href="komrade/backend/phonelines.py" class="uri">komrade/backend/phonelines.py</a></p>
+<p>Code is primarily in:</p>
+<ul>
+<li><p><a href="komrade/backend/keymaker.py" class="uri">komrade/backend/keymaker.py</a></p></li>
+<li><p><a href="komrade/backend/komrades.py" class="uri">komrade/backend/komrades.py</a></p></li>
+<li><p><a href="komrade/backend/phonelines.py" class="uri">komrade/backend/phonelines.py</a></p></li>
+</ul>
