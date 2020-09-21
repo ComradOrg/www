@@ -50,10 +50,11 @@ We present a simplified set of social media features drawn from everything that'
 
 #### Posting
   * Post up to 1 image and/or 1000 characters
-  * Post to the entire world (e.g. Twitter) ✔
+  * Post to the entire world (e.g. Twitter)
   * Post to those you trust (e.g. Facebook)
   * Post to your surrounding area by a distance radius (e.g. Nextdoor)
   * Anonymously up-vote or down-vote posts (e.g. Reddit)
+  * Post anonymously or from your account
 
 #### Organizing
   * Host events and invite others (e.g. Facebook)
@@ -61,30 +62,8 @@ We present a simplified set of social media features drawn from everything that'
   * Anonymously pin on a map sites of danger, like police (e.g. Waze)
 
 #### Messaging
-  * Message securely with encrypted contents (e.g. Signal) ✔
-  * Message with untraceable metadata via Tor (new) ✔
-
-## How is this different from...
-
-### Comparison  table
-
-| Other cool thing                              | What is it?      | Kind of like...  | Decentralized?               | Anonymous?                                  | Confidential?                             | Data persistence?                   | Identity verification?                | Need invitation/server?          | What data can user find?                  | 
-| --------------------------------------------- | ---------------- | ---------------- | ---------------------------- | ------------------------------------------- | ----------------------------------------- | ----------------------------------- | ------------------------------------- | -------------------------------- | ----------------------------------------- | 
-| *Komrade*                                     | *Social network* | *Twitter*        | *No (central server on Tor)* | ***Yes (everything routed via Tor)***       | ***Yes (100% E2EE)***                     | *Minimal server (deleted ASAP)*     | *Yes (central public key repository)* | ***No (works like twitter)***    | Mixed (global feed; hashtag search only)  | 
-| [Secure Scuttlebutt](https://scuttlebutt.nz/) | Social network   | Twitter/Facebook | **Fully (P2P)**              | No (P2P reveals IP; friend networks public) | Partly (private E2EE, public unencrypted) | Distributed across friend networks? | Yes? (federated key exchange?)        | Yes (need initial pub)           | Limited (search friends-of-friends' data) | 
-| [Diaspora](https://diasporafoundation.org/)   | Social network   | Twitter          | Partly (federated)           | No (unless via Tor Browser)                 | No (unencrypted?)                         | ?                                   | ?                                     | Yes (need 'pod' server)          |                                           |
-| [Mastodon](https://joinmastodon.org/)         | Social network   | Twitter          | Partly (federated)           | No (unless via Tor Browser)                 | No (unencrypted?)                         | ?                                   | ?                                     | Yes (need 'instance' server)     |                                           |
-| [Matrix](https://matrix.org/)                 | Group chat       | Slack            | Partly (federated)           | No?                                         | **Yes? (100% E2EE)**                      | ?                                   | Yes (?)                               | Yes (invited channels only?)     |                                           |
-| [Briar Messenger](https://briarproject.org/)  | Messenger        | WhatsApp         | **Fully (P2P)**              | **Yes? (Tor)**                              | **Yes (100% E2EE)**                       | None (needs 24/7 listener)          | Partly (public keys traded IRL)       | Yes (need initial contact?)      |                                           |
-| [Cabal Chat](https://cabal.chat/)             | Chatrooms        | IRC              | **Fully (P2P)**              | No (P2P reveals IP) <sup>1</sup>            | Mostly (shared key, not E2EE)             | Distributed Hash Table              | No (?)                                | Not really (public chat is open) |                                           |
-
-Sources:
-
-<sup>1.</sup> [Cabal FAQ: What kind of security is involved with Cabal?](https://cabal.chat/faq.html#:~:text=What%20kind%20of%20security%20does,is%20involved%20in%20a%20cabal)
-
-### In words
-
-1. Secure Scuttlebutt? SSB is probably the most impressive alternative social network out there. It's truly P2P, not just federated like Diaspora or Mastodon, so the content you see is coming to you via your friends and their friends: you download it directly from them. It has a great user base...
+  * Message securely with encrypted contents (e.g. Signal)
+  * Message securely with untraceable metadata (new)
 
 
 ## Progress
@@ -178,10 +157,7 @@ Plain old object-oriented code in Python. The root entity is a "Keymaker": anyon
 We are using [Themis](https://github.com/cossacklabs/themis), a high-level cross-platform cryptography library, for all cryptographic functions, rather than handling any primitives ourselves.
 
 Code is primarily in:
-
-  * [komrade/backend/keymaker.py](komrade/backend/keymaker.py)
-
-  * [komrade/backend/komrades.py](komrade/backend/komrades.py)
-
-  * [komrade/backend/phonelines.py](komrade/backend/phonelines.py)
+* [komrade/backend/keymaker.py](komrade/backend/keymaker.py)
+* [komrade/backend/komrades.py](komrade/backend/komrades.py)
+* [komrade/backend/phonelines.py](komrade/backend/phonelines.py)
 
