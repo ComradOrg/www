@@ -1,35 +1,100 @@
 <html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style type='text/css'>
-    body {
-        font-family:monospace;
-        /* text-align:center; */
-        font-size:1em;
-    }
-    img {
-        display: block;
-        margin: 0 auto;
-        width: 600px;
-        
-    }
-    h1 { text-align: center;}
-    #content {
-        max-width:600px;
-        margin: 0 auto;
-    }
+        @font-face {
+            font-family: KomradeFont;
+            src: url("assets/overpass-mono-regular.otf") format("opentype");
+        }
 
-    p { text-align: justify }
+        @font-face {
+            font-family: KomradeFontII;
+            src: url("assets/Strengthen.ttf");
+        }
 
+        body {
+            font-family: KomradeFont;
+            /* text-align:center; */
+            font-size: 1em;
+        }
+
+        code {
+            margin-left: 1em;
+            font-family: monospace;
+        }
+
+        a {
+            color: black;
+            text-decoration: none;
+        }
+
+        /* Globally */
+        /* Each state */
+
+        a:visited {
+            text-decoration: none;
+            color: black;
+        }
+
+        a:hover {
+            text-decoration: none;
+            color: red;
+        }
+
+        a:focus {
+            text-decoration: none;
+            color: black;
+        }
+
+        a:hover,
+        a:active {
+            text-decoration: none;
+            color: red
+        }
+
+        img {
+            display: block;
+            margin: 0 auto;
+            width: 600px;
+
+        }
+
+        h1 {
+            text-align: center;
+            font-family: KomradeFontII;
+            font-size: 5em;
+            margin: 0 auto;
+            padding: 0;
+        }
+
+        #content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        p {
+            text-align: justify
+        }
     </style>
     <title>Komrade: a socialist network</title>
 </head>
+
 <body>
 
     <div id="content">
         <h1 id="komrade"><a href="http://github.com/Komrade/Komrade">Komrade</a></h1>
+        <center>
+            <small><i>
+                <a href="https://github.com/Komrade/Komrade">Help develop</a> |
+                <a href="https://github.com/Komrade/Komrade/issues?q=is%3Aopen+is%3Aissue+label%3Aconceptual">Help
+                    conceptualize</a> |
+                <a href="#install">Help test</a>
+            </i></small>
+        </center>
+        
 
         
 <p>Komrade is a socialist network. It seizes the means of digital production.</p>
