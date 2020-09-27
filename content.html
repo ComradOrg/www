@@ -58,6 +58,10 @@
 </ul>
 <h2 id="progress">Progress</h2>
 <h3 id="animations-from-mobiledesktop-app">Animations from mobile/desktop app</h3>
+<h4 id="registering-and-connecting-through-tor">Registering and connecting through Tor</h4>
+<p>As of 27 Sep.</p>
+<p><img src="komrade/app/assets/komrade-screen-preview-2020-09-27.gif" alt="GIF animation" width="600" /></p>
+<h4 id="navigating-posts">Navigating posts</h4>
 <p>As of the 23rd of August.</p>
 <p><img src="komrade/app/assets/komrade-screen-preview-2020-08-23.gif" alt="GIF animation" /></p>
 <h3 id="animations-from-terminal-app">Animations from terminal app</h3>
@@ -77,13 +81,19 @@
 <h3 id="install">Install</h3>
 <p><a href="https://towardsdatascience.com/a-quick-guide-to-using-command-line-terminal-96815b97b955">Open a terminal</a>, and then copy and paste the following line into it:</p>
 <pre><code>bash &lt;(curl -s komrade.app/run)</code></pre>
-<p>Then hit enter. <a href="https://github.com/Komrade/Komrade/blob/master/script/micro_installer">That</a> grabs a shortcut to <a href="https://github.com/Komrade/Komrade/blob/master/script/install">this auto-installer script</a>. It will install Komrade in a virtual Python environment into a folder of your choosing.</p>
+<p>Then hit enter. <a href="https://github.com/Komrade/Komrade/blob/master/script/micro_installer">That</a> grabs a shortcut to <a href="https://github.com/Komrade/Komrade/blob/master/script/install">this auto-installer script</a>. It will install Komrade in a virtual Python environment into a folder of your choosing (although it may only work at the moment if you let it use the default of <code>~/komrade</code>).</p>
 <h3 id="run">Run</h3>
 <p>Install as above.</p>
-<p>For the terminal client, run:</p>
-<pre><code>komrade-cli</code></pre>
 <p>For the mobile/desktop app, run:</p>
 <pre><code>komrade-app</code></pre>
+<p>If that doesn't work, try pasting the following lines:</p>
+<pre><code>source ~/komrade/lib/miniconda3/etc/profile.d/conda.sh
+export PATH=&quot;~/komrade/lib/miniconda3/bin:$PATH&quot;
+conda activate ~/komrade/code/venv
+python -m pip install -r ~/komrade/code/requirements.txt
+python ~/komrade/code/komrade/app/main.py</code></pre>
+<p>For the terminal client (which may be broken at the moment), run:</p>
+<pre><code>komrade-cli</code></pre>
 <p>Or to run the server or Operator (for development only):</p>
 <pre><code>komrade-op</code></pre>
 <h2 id="details">Details</h2>
@@ -94,10 +104,10 @@
 <p>Vanilla Python. Code is in <a href="komrade/cli" class="uri">komrade/cli</a>.</p>
 <h3 id="backend">Backend</h3>
 <h4 id="api">API</h4>
-<p>Plain old object-oriented code in Python. The root entity is a &quot;Keymaker&quot;: anyone from <span class="citation">@Telephone</span>, to <span class="citation">@Operator</span>, to users, to groups, who has a public/private key pair. The database uses a simple file-based key-value store, written in Python (<a href="https://github.com/mbr/simplekv">simplekv</a>). Code is in <a href="komrade/backend" class="uri">komrade/backend</a>.</p>
+<p>Plain old object-oriented code in Python. The root entity is a &quot;Keymaker&quot;: anyone from <span class="citation">@Telephone</span>, to <span class="citation">@Operator</span>, to users, to groups, who has a public/private key pair. The database uses a simple file-based key-value store using the Redis protocol: <a href="https://github.com/seppo0010/rlite">rlite</a>, via its <a href="https://github.com/seppo0010/rlite-py">rlite-py</a> Python bindings. All code for backend/API is in <a href="komrade/backend" class="uri">komrade/backend</a>.</p>
 <h4 id="cryptography">Cryptography</h4>
-<p>We are using <a href="https://github.com/cossacklabs/themis">Themis</a>, a high-level cross-platform cryptography library, for all cryptographic functions, rather than handling any primitives ourselves.</p>
-<p>Code is primarily in:</p>
+<p>We are using <a href="https://github.com/cossacklabs/themis">Themis</a>, a high-level cross-platform cryptography library, for all cryptographic functions, rather than handling any primitives ourselves. Installing it from packages is tricky, so right now the <a href="#install">auto-installer</a> builds it from sources.</p>
+<p>Crypto-related code is primarily in:</p>
 <ul>
 <li><p><a href="komrade/backend/keymaker.py" class="uri">komrade/backend/keymaker.py</a></p></li>
 <li><p><a href="komrade/backend/komrades.py" class="uri">komrade/backend/komrades.py</a></p></li>
