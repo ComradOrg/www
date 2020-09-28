@@ -178,29 +178,46 @@
 <p><img src="assets/komrade-terminal-preview--2020-09-19--posting.gif" alt="GIF animation of posting" /></p>
 <h2 id="usage">Usage</h2>
 <h3 id="install">Install</h3>
-<h4 id="on-mac-osx">on Mac OSX</h4>
+<h4 id="on-mac-osx">...on Mac OSX</h4>
 <p>Download and run <a href="https://github.com/Komrade/Komrade/raw/master/script/InstallKomrade.app.zip">this installer</a>.</p>
-<h4 id="on-linux-or-windows">on Linux or Windows</h4>
+<h4 id="on-linux-or-windows">...on Linux or Windows</h4>
 <p>Open a terminal in Linux, or a <a href="https://cygwin.com/install.html">Cygwin shell</a> in Windows, and copy and paste the following line into it:</p>
 <pre><code>bash <(curl -s https://komrade.app/run)</code></pre>
 <p><a href="https://komrade.app/run">That</a>'s a shortcut to <a href="https://github.com/Komrade/Komrade/blob/master/script/install">this auto-installer script</a>. It installs Komrade in a virtual Python environment in the folder <code>komrade</code> in your home directory.</p>
 <h3 id="run">Run</h3>
-<h4 id="on-mac-osx-1">on Mac OSX</h4>
+<h4 id="on-mac-osx-1">...on Mac OSX</h4>
 <p>Install <a href="#on-mac-osx">as above</a>.</p>
 <p>Run &quot;Komrade.app&quot; in your Applications folder.</p>
-<h4 id="on-linux-or-windows-1">on Linux or Windows</h4>
+<h4 id="on-linux-or-windows-1">...on Linux or Windows</h4>
 <p>Open a terminal in Linux, or a <a href="https://cygwin.com/install.html">Cygwin shell</a> in Windows, and type:</p>
 <pre><code>komrade-app</code></pre>
-<p>If that doesn't work, try pasting the following lines:</p>
+<p>If that doesn't work, try:</p>
+<pre><code>~/komrade/code/bin/komrade-app</code></pre>
+<p>If that still doesn't work, try pasting the following lines:</p>
+<p>pasting the following lines:</p>
 <pre><code>source ~/komrade/lib/miniconda3/etc/profile.d/conda.sh
 export PATH=&quot;~/komrade/lib/miniconda3/bin:$PATH&quot;
 conda activate ~/komrade/code/venv
 python -m pip install -r ~/komrade/code/requirements.txt
 python ~/komrade/code/komrade/app/main.py</code></pre>
+<h4 id="running-terminal-client">Running terminal client</h4>
 <p>For the terminal client (which may be broken at the moment), run:</p>
-<pre><code>komrade-cli</code></pre>
-<p>Or to run the server or Operator (for development only):</p>
-<pre><code>komrade-op</code></pre>
+<pre><code>komrade-cli   # or: ~/komrade/code/bin/komrade-cli</code></pre>
+<p>or, if necessary, paste the following lines:</p>
+<pre><code>source ~/komrade/lib/miniconda3/etc/profile.d/conda.sh
+export PATH=&quot;~/komrade/lib/miniconda3/bin:$PATH&quot;
+conda activate ~/komrade/code/venv
+python -m pip install -r ~/komrade/code/requirements.txt
+python ~/komrade/code/komrade/cli/cli.py</code></pre>
+<h4 id="running-server-development-only">Running server (development only)</h4>
+<p>To run The Operator server (for development purposes only), run:</p>
+<pre><code>komrade-op   # or: ~/komrade/code/bin/komrade-op</code></pre>
+<p>or, if necessary, paste the following lines:</p>
+<pre><code>source ~/komrade/lib/miniconda3/etc/profile.d/conda.sh
+export PATH=&quot;~/komrade/lib/miniconda3/bin:$PATH&quot;
+conda activate ~/komrade/code/venv
+python -m pip install -r ~/komrade/code/requirements.txt
+python ~/komrade/code/komrade/backend/switchboard.py</code></pre>
 <h2 id="details">Details</h2>
 <h3 id="frontend">Frontend</h3>
 <h4 id="mobiledesktop">Mobile/desktop</h4>
