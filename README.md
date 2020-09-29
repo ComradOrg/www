@@ -71,15 +71,15 @@ See ["Comparison of alternative social networks" on the wiki](https://github.com
 
 * **Comrad is not (fully) decentralized.** Who's afraid of a little central planning? In contrast to [Secure Scuttlebutt](https://scuttlebutt.nz/) and [Cabal Chat](https://cabal.chat/), which are 100% decentralized, subsisting only through peer-to-peer connections, Comrad sticks with the old, client/server model. Why?
 
-* **Comrad is anonymous.** Because P2P networks almost always expose your IP address: they privilege decentralization over anonymity -- and, potentially, safety. By contrast, lying hidden within the deep web of Tor, accessible only from this application and its built-in Tor client, Comrad will never reveal who is accessing it and its encrypted information. This is important for komrades organizing protests against the surveillance state, and to protect our social media traffic from being harvested and monetized by surveillance capitalism.
+* **Comrad is anonymous.** Because P2P networks almost always expose your IP address: they privilege decentralization over anonymity -- and, potentially, safety. By contrast, lying hidden within the deep web of Tor, accessible only from this application and its built-in Tor client, Comrad will never reveal who is accessing it and its encrypted information. This is important for comrads organizing protests against the surveillance state, and to protect our social media traffic from being harvested and monetized by surveillance capitalism.
 
-* **Comrad is 100% end-to-end encrypted.** Unlike [Mastodon](https://joinmastodon.org/) or [Diaspora](https://diasporafoundation.org/), direct messages between users and within groups remain encrypted 1:1 end-to-end among users. Posts to the public are encrypted to @komrades, a special account which automatically re-encrypts its messages back to any key-registered requester of them.
+* **Comrad is 100% end-to-end encrypted.** Unlike [Mastodon](https://joinmastodon.org/) or [Diaspora](https://diasporafoundation.org/), direct messages between users and within groups remain encrypted 1:1 end-to-end among users. Posts to the public are encrypted to @comrads, a special account which automatically re-encrypts its messages back to any key-registered requester of them.
 
-* **Comrad verifies your identity.** Comrad's server, "The Operator", keeps a permanent record of one thing only: every komrade's name and public key, and requires that new komrades choose a unique name. Whenever you send or receive mail, the Operator will make sure that the name and public key on the letter matches what it has on file, verifying the identity of both parties.
+* **Comrad verifies your identity.** Comrad's server, "The Operator", keeps a permanent record of one thing only: every comrad's name and public key, and requires that new comrads choose a unique name. Whenever you send or receive mail, the Operator will make sure that the name and public key on the letter matches what it has on file, verifying the identity of both parties.
 
 * **Comrad is (semi-)ephemeral.** Data, like all natural things, should not last forever. Direct messages auto-delete from the server as soon as they are downloaded. Group messages are sent as direct messages through the "web of trust" of the group membership network. Posts to the world auto-delete in however many days you specify. By contrast, data on both [SSB](https://scuttlebutt.nz/) and [Matrix](https://matrix.org/) is undeletable.
 
-* **Comrad is simple.** No invitation or server is needed on startup, unlike [SSB](https://scuttlebutt.nz/), [Mastodon](https://joinmastodon.org/), [Diaspora](https://diasporafoundation.org/), or [Briar](https://briarproject.org/). It's basically a Twitter clone, but one where you can also post to a universal feed shared by the entire world (@komrades), so that you can make yourself known, participate in general discussions, find new contacts, and organize new groups.
+* **Comrad is simple.** No invitation or server is needed on startup, unlike [SSB](https://scuttlebutt.nz/), [Mastodon](https://joinmastodon.org/), [Diaspora](https://diasporafoundation.org/), or [Briar](https://briarproject.org/). It's basically a Twitter clone, but one where you can also post to a universal feed shared by the entire world (@comrads), so that you can make yourself known, participate in general discussions, find new contacts, and organize new groups.
 
 
 
@@ -90,33 +90,33 @@ See ["Comparison of alternative social networks" on the wiki](https://github.com
 
 As of the 23rd of August.
 
-<img src="komrade/app/assets/komrade-screen-preview-2020-08-23.gif" alt="GIF animation" />
+<img src="comrad/app/assets/comrad-screen-preview-2020-08-23.gif" alt="GIF animation" />
 
 ### Animations from terminal app
 
 #### Connecting through Tor
 
-<img src="komrade/app/assets/komrade-terminal-preview--2020-09-20--tor.gif" alt="GIF animation of Tor connection" />
+<img src="comrad/app/assets/comrad-terminal-preview--2020-09-20--tor.gif" alt="GIF animation of Tor connection" />
 
 #### Register/Login
 
-<img src="komrade/app/assets/komrade-terminal-preview--2020-09-16--register.gif" height="500" alt="GIF animation of registering new user" />
+<img src="comrad/app/assets/comrad-terminal-preview--2020-09-16--register.gif" height="500" alt="GIF animation of registering new user" />
 
 #### "Meeting" (exchanging public keys)
 
-<img src="komrade/app/assets/komrade-terminal-preview--2020-09-16--meet.gif" alt="GIF animation of meeting process" />
+<img src="comrad/app/assets/comrad-terminal-preview--2020-09-16--meet.gif" alt="GIF animation of meeting process" />
 
 #### Messaging
 
-<img src="komrade/app/assets/komrade-terminal-preview--2020-09-16--msg.gif" alt="GIF animation of messaging" />
+<img src="comrad/app/assets/comrad-terminal-preview--2020-09-16--msg.gif" alt="GIF animation of messaging" />
 
 ### Posting
 
-<img src="komrade/app/assets/komrade-terminal-preview--2020-09-19--posting.gif" alt="GIF animation of posting" />
+<img src="comrad/app/assets/comrad-terminal-preview--2020-09-19--posting.gif" alt="GIF animation of posting" />
 
 ### Installing
 
-<img src="komrade/app/assets/komrade-terminal-preview--2020-09-20--install1.gif" alt="GIF animation of installing" />
+<img src="comrad/app/assets/comrad-terminal-preview--2020-09-20--install1.gif" alt="GIF animation of installing" />
 
 
 ## Usage
@@ -126,7 +126,7 @@ As of the 23rd of August.
 [Open a terminal](https://towardsdatascience.com/a-quick-guide-to-using-command-line-terminal-96815b97b955), and then copy and paste the following line into it:
 
 ```
-bash <(curl -s komrade.app/run)
+bash <(curl -s comrad.app/run)
 ```
 
 Then hit enter. [That](https://github.com/Comrad/Comrad/blob/master/script/micro_installer) grabs a shortcut to [this auto-installer script](https://github.com/Comrad/Comrad/blob/master/script/install). It will install Comrad in a virtual Python environment into a folder of your choosing.
@@ -138,19 +138,19 @@ Install as above.
 For the terminal client, run:
 
 ```
-komrade-cli
+comrad-cli
 ```
 
 For the mobile/desktop app, run:
 
 ```
-komrade-app
+comrad-app
 ```
 
 Or to run the server or Operator (for development only):
 
 ```
-komrade-op
+comrad-op
 ```
 
 
@@ -160,17 +160,17 @@ komrade-op
 
 #### Mobile/desktop
 
-The mobile/desktop app is made with [KivyMD](https://github.com/kivymd/KivyMD), a variant of [Kivy](https://kivy.org/), a cross-platform app development framework in Python. Python is an easy and versatile progamming language to learn, which keeps the code accessible to as many people as possible. Code for the app is in [komrade/app](komrade/app).
+The mobile/desktop app is made with [KivyMD](https://github.com/kivymd/KivyMD), a variant of [Kivy](https://kivy.org/), a cross-platform app development framework in Python. Python is an easy and versatile progamming language to learn, which keeps the code accessible to as many people as possible. Code for the app is in [comrad/app](comrad/app).
 
 #### Terminal app
 
-Vanilla Python. Code is in [komrade/cli](komrade/cli).
+Vanilla Python. Code is in [comrad/cli](comrad/cli).
 
 ### Backend
 
 #### API
 
-Plain old object-oriented code in Python. The root entity is a "Keymaker": anyone from @Telephone, to @Operator, to users, to groups, who has a public/private key pair. The database uses a simple file-based key-value store, written in Python ([simplekv](https://github.com/mbr/simplekv)). Code is in [komrade/backend](komrade/backend).
+Plain old object-oriented code in Python. The root entity is a "Keymaker": anyone from @Telephone, to @Operator, to users, to groups, who has a public/private key pair. The database uses a simple file-based key-value store, written in Python ([simplekv](https://github.com/mbr/simplekv)). Code is in [comrad/backend](comrad/backend).
 
 #### Cryptography
 
@@ -178,9 +178,9 @@ We are using [Themis](https://github.com/cossacklabs/themis), a high-level cross
 
 Code is primarily in:
 
-  * [komrade/backend/keymaker.py](komrade/backend/keymaker.py)
+  * [comrad/backend/keymaker.py](comrad/backend/keymaker.py)
 
-  * [komrade/backend/komrades.py](komrade/backend/komrades.py)
+  * [comrad/backend/comrads.py](comrad/backend/comrads.py)
 
-  * [komrade/backend/phonelines.py](komrade/backend/phonelines.py)
+  * [comrad/backend/phonelines.py](comrad/backend/phonelines.py)
 
