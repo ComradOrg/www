@@ -67,7 +67,7 @@ We present a simplified set of social media features drawn from everything that'
 
 ## How is this different from ...?
 
-See ["Comparison of alternative social networks" on the wiki](https://github.com/Comrad/Comrad/wiki/Comparison-of-alternative-social-networks) for an attempt at a systematic comparison. (And please help edit, if you can! The data there is a little incomplete and probably a little inaccurate.) But here are some imagined differences.
+See ["Comparison of alternative social networks" on the wiki](https://github.com/ComradOrg/Comrad/wiki/Comparison-of-alternative-social-networks) for an attempt at a systematic comparison. (And please help edit, if you can! The data there is a little incomplete and probably a little inaccurate.) But here are some imagined differences.
 
 * **Comrad is not (fully) decentralized.** Who's afraid of a little central planning? In contrast to [Secure Scuttlebutt](https://scuttlebutt.nz/) and [Cabal Chat](https://cabal.chat/), which are 100% decentralized, subsisting only through peer-to-peer connections, Comrad sticks with the old, client/server model. Why?
 
@@ -129,7 +129,7 @@ As of the 23rd of August.
 bash <(curl -s comrad.app/run)
 ```
 
-Then hit enter. [That](https://github.com/Comrad/Comrad/blob/master/script/micro_installer) grabs a shortcut to [this auto-installer script](https://github.com/Comrad/Comrad/blob/master/script/install). It will install Comrad in a virtual Python environment into a folder of your choosing.
+Then hit enter. [That](https://github.com/ComradOrg/Comrad/blob/master/script/micro_installer) grabs a shortcut to [this auto-installer script](https://github.com/ComradOrg/Comrad/blob/master/script/install). It will install Comrad in a virtual Python environment into a folder of your choosing.
 
 ### Run
 

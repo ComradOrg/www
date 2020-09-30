@@ -90,10 +90,10 @@
 <body>
 
     <div id="content">
-        <h1 id="comrad"><a href="http://github.com/Comrad/Comrad">Comrad</a></h1>
+        <h1 id="comrad"><a href="http://github.com/ComradOrg/Comrad">Comrad</a></h1>
         <center>
             <small><i>
-                <a href="https://github.com/Comrad/Comrad">Help develop</a> |
+                <a href="https://github.com/ComradOrg/Comrad">Help develop</a> |
                 <a href="https://matrix.to/#/!YojbxvZclfEsvIeeUi:matrix.org?via=matrix.org">Help
                     conceptualize</a> |
                 <a href="#install">Help test</a>
@@ -219,19 +219,19 @@ python ~/comrad/code/comrad/backend/switchboard.py</code></pre>
 <h2 id="details">Details</h2>
 <h3 id="frontend">Frontend</h3>
 <h4 id="mobiledesktop">Mobile/desktop</h4>
-<p>The mobile/desktop app is made with <a href="https://github.com/kivymd/KivyMD">KivyMD</a>, a variant of <a href="https://kivy.org/">Kivy</a>, a cross-platform app development framework in Python. Python is an easy and versatile progamming language to learn, which keeps the code accessible to as many people as possible. Code for the app is in <a href="https://github.com/Comrad/Comrad/tree/master/comrad/app" class="uri">comrad/app</a>.</p>
+<p>The mobile/desktop app is made with <a href="https://github.com/kivymd/KivyMD">KivyMD</a>, a variant of <a href="https://kivy.org/">Kivy</a>, a cross-platform app development framework in Python. Python is an easy and versatile progamming language to learn, which keeps the code accessible to as many people as possible. Code for the app is in <a href="https://github.com/ComradOrg/Comrad/tree/master/comrad/app" class="uri">comrad/app</a>.</p>
 <h4 id="terminal-app">Terminal app</h4>
-<p>Vanilla Python. Code is in <a href="https://github.com/Comrad/Comrad/tree/master/comrad/cli" class="uri">comrad/cli</a>.</p>
+<p>Vanilla Python. Code is in <a href="https://github.com/ComradOrg/Comrad/tree/master/comrad/cli" class="uri">comrad/cli</a>.</p>
 <h3 id="backend">Backend</h3>
 <h4 id="api">API</h4>
-<p>Plain old object-oriented code in Python. The root entity is a &quot;Keymaker&quot;: anyone from <span class="citation">@Telephone</span>, to <span class="citation">@Operator</span>, to users, to groups, who has a public/private key pair. The database uses a simple file-based key-value store using the Redis protocol: <a href="https://github.com/seppo0010/rlite">rlite</a>, via its <a href="https://github.com/seppo0010/rlite-py">rlite-py</a> Python bindings. All code for backend/API is in <a href="https://github.com/Comrad/Comrad/tree/master/comrad/backend" class="uri">comrad/backend</a>.</p>
+<p>Plain old object-oriented code in Python. The root entity is a &quot;Keymaker&quot;: anyone from <span class="citation">@Telephone</span>, to <span class="citation">@Operator</span>, to users, to groups, who has a public/private key pair. The database uses a simple file-based key-value store using the Redis protocol: <a href="https://github.com/seppo0010/rlite">rlite</a>, via its <a href="https://github.com/seppo0010/rlite-py">rlite-py</a> Python bindings. All code for backend/API is in <a href="https://github.com/ComradOrg/Comrad/tree/master/comrad/backend" class="uri">comrad/backend</a>.</p>
 <h4 id="cryptography">Cryptography</h4>
 <p>We are using <a href="https://github.com/cossacklabs/themis">Themis</a>, a high-level cross-platform cryptography library, for all cryptographic functions, rather than handling any primitives ourselves. Installing it from packages is tricky, so right now the <a href="#install">auto-installer</a> builds it from sources.</p>
 <p>Crypto-related code is primarily in:</p>
 <ul>
-<li><p><a href="https://github.com/Comrad/Comrad/tree/master/comrad/backend/keymaker.py" class="uri">comrad/backend/keymaker.py</a></p></li>
-<li><p><a href="https://github.com/Comrad/Comrad/tree/master/comrad/backend/comrades.py" class="uri">comrad/backend/comrades.py</a></p></li>
-<li><p><a href="https://github.com/Comrad/Comrad/tree/master/comrad/backend/phonelines.py" class="uri">comrad/backend/phonelines.py</a></p></li>
+<li><p><a href="https://github.com/ComradOrg/Comrad/tree/master/comrad/backend/keymaker.py" class="uri">comrad/backend/keymaker.py</a></p></li>
+<li><p><a href="https://github.com/ComradOrg/Comrad/tree/master/comrad/backend/comrades.py" class="uri">comrad/backend/comrades.py</a></p></li>
+<li><p><a href="https://github.com/ComradOrg/Comrad/tree/master/comrad/backend/phonelines.py" class="uri">comrad/backend/phonelines.py</a></p></li>
 </ul>
 
     </div>
